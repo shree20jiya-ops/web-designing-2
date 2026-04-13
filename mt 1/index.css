@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+    justify-content: center;
+
+}
+.container{
+    background-color: whitesmoke;
+    color:black;
+    padding:10px 20px;
+    margin:10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px grey;
+    border:none;
+}
+input{
+    width:75%;
+    margin:5px;
+    padding:5px;
+}
+button{
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: none;
+    margin: 5px;
+    
+}
+button.hover{
+     background-color: royalblue;
+    box-shadow: 4px 4px 12px gray;
+}

@@ -1,0 +1,94 @@
+function calculateMarks() {
+  let n = document.getElementById("subjects").value;
+  let total = 0;
+
+  for (let i = 1; i <= n; i++) {
+    let marks = parseInt(prompt("Enter marks for subject " + i));
+    total += marks;
+  }
+
+  let avg = total / n;
+  let grade = avg >= 50 ? "Pass" : "Fail";
+
+  document.getElementById("marksResult").innerText =
+    "Total: " + total + " | Average: " + avg + " | " + grade;
+}
+
+// 2. Even Odd
+function checkEvenOdd() {
+  let num = document.getElementById("num").value;
+  let result = (num % 2 == 0) ? "Even" : "Odd";
+  document.getElementById("evenOddResult").innerText = result;
+}
+
+// 3. Sum of N
+function sumN() {
+  let n = document.getElementById("n").value;
+  let sum = 0;
+  for (let i = 1; i <= n; i++) sum += i;
+  document.getElementById("sumResult").innerText = "Sum = " + sum;
+}
+
+// 4. Table
+function generateTable() {
+  let num = document.getElementById("tableNum").value;
+  let result = "";
+  for (let i = 1; i <= 10; i++) {
+    result += num + " x " + i + " = " + (num * i) + "<br>";
+  }
+  document.getElementById("tableResult").innerHTML = result;
+}
+
+// 5. Factorial
+function factorial() {
+  let num = document.getElementById("factNum").value;
+  let fact = 1;
+  for (let i = 1; i <= num; i++) fact *= i;
+  document.getElementById("factResult").innerText = "Factorial = " + fact;
+}
+
+// 6. Largest Number
+function largest() {
+  let arr = [
+    document.getElementById("n1").value,
+    document.getElementById("n2").value,
+    document.getElementById("n3").value,
+    document.getElementById("n4").value,
+    document.getElementById("n5").value
+  ];
+  let max = Math.max(...arr);
+  document.getElementById("largestResult").innerText = "Largest = " + max;
+}
+
+// 7. Simple Interest
+function simpleInterest() {
+  let p = document.getElementById("p").value;
+  let r = document.getElementById("r").value;
+  let t = document.getElementById("t").value;
+
+  let si = (p * r * t) / 100;
+  document.getElementById("siResult").innerText = "SI = " + si;
+}
+
+// 8. Prime Number
+function checkPrime() {
+  let num = document.getElementById("primeNum").value;
+  let isPrime = true;
+
+  if (num <= 1) isPrime = false;
+
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  document.getElementById("primeResult").innerText =
+    isPrime ? "Prime Number" : "Not Prime";
+}
+
+</script>
+
+</body>
+</html>
